@@ -13,9 +13,9 @@ myApp.config(function($stateProvider, $urlRouterProvider){
     url: "/contact",
     templateUrl: "./templates/contact.html"
   })
-  .state("other", {
-    url: "/other",
-    templateUrl: "./templates/other.html",
+  .state("dots", {
+    url: "/dots",
+    templateUrl: "./templates/dots.html",
     controller: "dotsCtrl"
   })
 
