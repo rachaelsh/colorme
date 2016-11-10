@@ -1,0 +1,13 @@
+<div class="loginpage">
+<h1>Welcome.</h1>
+<form ng-submit="loginUser(user)">
+  <h2>log In Here</h2>
+  <input type="text" placeholder="User Email"ng-model="user.email">
+  <input placeholder="User Password" type="password" ng-model="user.password">
+
+  <button type="submit" name="login">log in!</button>
+</form>
+<span>Don't have an account? <a ng-click="register()">Register here.</a></span>
+<div id="registering"></div>
+<!-- {{directivehere}} -->
+</div>
