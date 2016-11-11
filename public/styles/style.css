@@ -1,7 +1,8 @@
 /*MAIN PAGE*/
 body {
   margin: 0;
-  background-color: #D0F4F3;
+  /*background-color: #D0F4F3;*/
+  overflow: hidden;
 }
 .container {
   display: block;
@@ -112,10 +113,9 @@ fieldset {
 
 
 /*DOTS*/
-.dotsimage {
+
+.dotscontainer img {
   margin: auto;
-}
-.dotsimage img {
   width:auto;
   height: 80vh;
 }
@@ -127,18 +127,14 @@ fieldset {
   stroke-linecap: round;
 }
 .connectme {
+  user-select: none;
   height: 60%;
   width: 60%;
 }
-svg {
-  user-select: none;
-  border: 0;
-  position: absolute;
-  top: 0px;
-  left:0;
+drawme {
+display: inline-block;
   z-index: 100;
   box-shadow:none;
-
 }
 
 /*COLOR PAGE*/
@@ -149,7 +145,6 @@ svg {
   bottom:-80px;
   left:-200px;
 }
-
 .clouds img {
   width: 300px;
   height:auto;
@@ -164,7 +159,6 @@ svg {
   display: flex;
   flex-wrap: wrap;
 }
-
 .box img{
   background-color: blue;
   display: block;
@@ -176,7 +170,11 @@ svg {
   height: 80vh;
   margin: auto;
 }*/
-
+.omfgjustwork {
+  position: absolute;
+  left: 200px;
+  top: 200px;
+}
 #colorimage {
   width: 500px;
   height: auto;
@@ -187,16 +185,15 @@ svg {
 /*STAR FIELD*/
 .starcontainer {
   position: relative;
+  top: 0px;
+  left: 0px;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to bottom, #020107 0%, #201b46 100%);
-  overflow: hidden;
+  /*overflow: hidden;*/
+  z-index: -15;
 }
-.omfgjustwork {
-  position: absolute;
-  left: 200px;
-  top: 200px;
-}
+
 .stars {
   z-index: 10;
   width: 1px;
