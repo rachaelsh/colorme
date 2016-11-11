@@ -1,8 +1,15 @@
-<div>
-<form>
-<input type="text" placeholder="User Email"ng-model="user.email">
-<input placeholder="User Password" type="password" ng-model="user.password">
-<input placeholder="User Name" type="text" ng-model="user.name">
-<button type="submit" name="login">log in!</button>
-</form>
+
+
+<div ng-if="currentUser"class="homepage"><h1>HOME!</h1>
+<h1>Hi, {{currentUser.name}}!</h1>
+
+</div>
+
+<div ng-if="!currentUser" class="403" ui-sref="login">
+  <form>
+  <input type="text" placeholder="User Email"ng-model="user.email">
+  <input placeholder="User Password" type="password" ng-model="user.password">
+  <input placeholder="User Name" type="text" ng-model="user.name">
+  <button type="submit" name="login">log in!</button>
+  </form>
 </div>

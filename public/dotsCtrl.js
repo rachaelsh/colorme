@@ -1,42 +1,7 @@
 angular.module("blankSlate").controller("dotsCtrl", function(mainServ, $scope){
 
 
-  $scope.test = console.log("hey");
-
-
-  //d3 line draw
-//   var line;
-//
-// var vis = d3.select("div").append("svg")
-//     .attr("width", 1900)
-//     .attr("height", 1000)
-//     .on("mousedown", mousedown)
-//     .on("mouseup", mouseup);
-//
-// function mousedown() {
-//
-//     var m = d3.mouse(this);
-//     line = vis.append("line")
-//         .attr("x1", m[0])
-//         .attr("y1", m[1])
-//         .attr("x2", m[0])
-//         .attr("y2", m[1]);
-//   console.log(m);
-//     vis.on("mousemove", mousemove);
-// }
-//
-// function mousemove() {
-//     var m = d3.mouse(this);
-//     line.attr("x2", m[0])
-//         .attr("y2", m[1]);
-// }
-//
-// function mouseup() {
-//     vis.on("mousemove", null);
-// }
-
-
-// d3 dragline
+  $scope.test = console.log("well this part works");
 var activeLine;
 
 var renderPath = d3.svg.line()
@@ -59,12 +24,12 @@ function dragstarted() {
 function dragged() {
   activeLine.datum().push(d3.mouse(this));
   activeLine.attr("d", renderPath);
+  console.log("bet this one doesnt");
 }
 
 function dragended() {
   activeLine = null;
 }
-
 
 
 });

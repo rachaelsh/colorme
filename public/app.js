@@ -1,13 +1,13 @@
 
 var myApp = angular.module("blankSlate", ['ui.router']);
 myApp.config(function($stateProvider, $urlRouterProvider){
-  $stateProvider.state("home", {
+  $stateProvider.state("color", {
     url:"/",
-    templateUrl: "./templates/home.html"
+    templateUrl: "./templates/color.html"
   })
-  .state("login", {
-    url: "/login",
-    templateUrl: "./templates/login.html"
+  .state("account", {
+    url: "/account",
+    templateUrl: "./templates/account.html"
   })
   .state("contact", {
     url: "/contact",

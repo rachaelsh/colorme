@@ -13,19 +13,20 @@ angular.module("blankSlate").controller("mainCtrl", function(mainServ, $scope){
 
   };
 
-//does this need to be a directive?
-$scope.register = function(){
-  console.log("sdfhjsdfhsdghujghss");//THIS TOO
-  var registerPage = angular.element("<br/><div><form><input type='text' placeholder='User Email' ng-model='user.email'><input placeholder='User Password' type='password' ng-model='user.password'><input placeholder='User Name' type='text' ng-model='user.name'><button type='submit' name='login'>login!</button></form></div>");
-
-  var getregister = document.getElementById("registering");
-
-  getregister.append(registerPage);
-
-};
-
-
-//foodapi
+// $scope.fillcolor = "#FFFF00";
+// $scope.usercolor = "#FFFF00";
+//
+// $scope.userColorPick = function(n){
+// $scope.usercolor = "#" + n;
+// console.log(n);
+// };
+//
+//   $scope.colorMe = function(n){
+//   var currentElement = document.getElementById(n);
+//   console.log(n);
+//   currentElement.setAttribute("fill", $scope.usercolor);
+//   //use this color to pick a soundbyte
+// };
 
 
 });
