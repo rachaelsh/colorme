@@ -1,4 +1,4 @@
-angular.module("blankSlate").controller("mainCtrl", function(mainServ, $scope){
+angular.module("blankSlate").controller("mainCtrl", function(mainServ, $scope, $state){
 //login
   $scope.loginUser = function(user){
     console.log(user);//PLEASE DELETE THIS
@@ -7,7 +7,7 @@ angular.module("blankSlate").controller("mainCtrl", function(mainServ, $scope){
       mainServ.getCurrentUser()
         .then(function(response){
           $scope.currentUser = response;
-          $state.go("home");
+          $state.go("color");
         })
     })
 
