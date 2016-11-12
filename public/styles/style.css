@@ -54,9 +54,13 @@ a:visited{
 .colorcontainer {
   background-color: #D0F4F3;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  z-index: -10;
 }
 .grass {
   height: 300px;
@@ -64,6 +68,7 @@ a:visited{
   position: fixed;
   bottom:-80px;
   left:-200px;
+  z-index: -15;
 }
 .clouds img {
   width: 300px;
@@ -81,14 +86,17 @@ a:visited{
 }
 .box img{
   background-color: blue;
-  display: block;
+  display: block;][]
   width: 30px;
   height: 30px;
 }
-.omfgjustwork {
+.colorthis {
   position: absolute;
-  left: 200px;
-  top: 200px;
+  left: 100px;
+  top: 80px;
+  width: 400px;
+  height:auto;
+  z-index: 20;
 }
 #colorimage {
   width: 500px;

@@ -24,7 +24,7 @@ app.post('/login', passport.authenticate("local-signup"), userCtrl.login);
 app.get('/logout', userCtrl.logout);
 app.get('/current', userCtrl.getMe);
 
-mongoose.connect("mongodb://localhost:27017/carsDB");
+mongoose.connect("mongodb://localhost:27017/colorDB");
 mongoose.connection.once('open', function(){
   console.log("mongoose connected");
 });
