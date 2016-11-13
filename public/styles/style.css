@@ -54,17 +54,6 @@ a:visited{
   text-decoration: none;
   color: white;
 }
-/*ACCOUNT*/
-.loginmodal {
-  position: fixed;
-  background-color: #FFF;
-  border: 1px solid #000;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, 0);/*with position left 50% will center*/
-  padding: 20px;
-}
-
 
 
 /*COLOR PAGE*/
@@ -132,14 +121,23 @@ a:visited{
   overflow: hidden;
 }
 
-
+.loginmodal {
+  position: fixed;
+  background-color: #FFF;
+  border: 1px solid #000;
+  width: 560px;
+  height: auto;
+  left: 50%;
+  top: 30%;
+  align-items: flex-start;
+  transform: translate(-50%, 0);/*with position left 50% will center*/
+  padding: 20px;
+}
 .collapse{
   cursor: pointer;
   display: block;
 }
-.collapse + input{
-  display: none;
-}
+
 .collapse + input + div{
   display:none;
 }
@@ -147,20 +145,9 @@ a:visited{
   display:block;
 }
 
-
-
-/*.collapse{
-  cursor: pointer;
-  display: block;
-}
-.collapse + input{
-  display: none;
-}
-.collapse + input + div{
-  display:none;
-}
-.collapse + input:checked + div{
-  display:block;
+/*label {
+  transform: translate(0px, 80px);
+  float: left;
 }*/
 
 
@@ -183,7 +170,9 @@ a:visited{
 .right {
   float: right;
 }
-
+.leftmargin{
+  margin: 0 0 0 60px;
+}
 textarea {
   float:left;
   margin-top:30px;
@@ -198,7 +187,6 @@ textarea {
 fieldset {
   border: none;
   display: block;
-  margin: 0 0 0 60px;
 }
 .buttons {
   float:right;
@@ -247,14 +235,6 @@ fieldset {
   width: 30vw;
   height: 30vh;
 }
-
-/*button {
-  position: absolute;
-  top:150px;
-  left: 150px;
-  width: 30px;
-  height: 15px;
-}*/
 
 
 /*STAR FIELD*/
