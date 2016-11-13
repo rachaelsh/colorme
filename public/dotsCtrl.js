@@ -1,7 +1,6 @@
 angular.module("blankSlate").controller("dotsCtrl", function(mainServ, $scope){
 
 
-  $scope.test = console.log("well this part works");
 var activeLine;
 
 var renderPath = d3.svg.line()
@@ -24,12 +23,30 @@ function dragstarted() {
 function dragged() {
   activeLine.datum().push(d3.mouse(this));
   activeLine.attr("d", renderPath);
-  console.log("bet this one doesnt");
 }
 
 function dragended() {
   activeLine = null;
+
+  //add if statement for finished
 }
 
+// var clearButton = d3.select("button")
 
+
+
+
+
+
+d3.select("#buttoninsert")
+  .append('button').html("clear")
+  .on('click', function() {
+  svg.selectAll("path").remove();
 });
+// };
+
+
+
+
+
+});//end of module

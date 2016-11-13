@@ -20,7 +20,11 @@ console.log(n);
 //clear image color
 
 $scope.colorNope = function(n){
-$scope.fillcolor = "#" + n;
+  if ($scope.fillcolor == "#FFFFFF"){
+    $scope.fillcolor = "#ffffff";
+  }else{
+    $scope.fillcolor = "#FFFFFF";
+  };
 };//also need to save image. can we reload in here for white FROM backend?
 
 

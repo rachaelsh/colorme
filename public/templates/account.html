@@ -1,4 +1,4 @@
-<div class="loginpage">
+<!-- <div class="loginmodal">
 <h1>Welcome.</h1>
 <form ng-submit="loginUser(user)">
   <h2>log In Here</h2>
@@ -8,7 +8,51 @@
 
   <button type="submit" name="login">log in!</button>
 </form>
-<span>Don't have an account? <a ng-click="register()">Register here.</a></span>
-<div id="registering"></div>
-<!-- {{directivehere}} -->
+<hr/>
+
+ <span>Don't have an account? <button ng-click="registerUser()">Register here.</button></span>
+<div id="registering">{{registerUser}}</div>
+</div> -->
+
+
+<div ng-if="!currentUser" class="loginmodal">
+  <h1>Welcome.</h1>
+  <form ng-submit="loginUser(user)">
+    <div class="logininfo">
+    <h2>log In Here</h2>
+    <fieldset class="left">
+      <input type="text" placeholder="Email"ng-model="user.email">
+    </fieldset>
+    <fieldset class="right">
+      <input placeholder="Password" type="password" ng-model="user.password">
+      <button class="buttons left" type="submit" name="login">log in!</button>
+    </div>
+    </fieldset>
+
+   <label class="collapse" for="_1">Don't have an account?</label>
+   <input id="_1" type="checkbox">
+      <div>
+   <p>Please include the following:</p>
+   <fieldset class="left">
+     <p>What's your name?</p>
+     <input placeholder="Name" type="text" ng-model="user.name">
+   </fieldset>
+   <fieldset class="right">
+     <p>What's your favorite color?</p>
+     <input placeholder="Color" type="text" ng-model="user.color">
+      <button class="buttons" ng-click="loginUser()">register!</button>
+  </fieldset>
+</div>
+     </form>
+
+  </div>
+
+
+<div ng-if="currentUser" class="profile"><h1>HOME!</h1>
+  <!-- ng-if="currentUser" -->
+<h1 ng-model="currentUser">Hi, {{currentUser.name}}!</h1>
+  <form ng-submit="logoutUser()">
+    <button type="submit" name="logout">log out!</button>
+  </form>
+<!-- then you want a screen of your pictures that you can trash -->
 </div>

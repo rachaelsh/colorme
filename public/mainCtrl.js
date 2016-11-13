@@ -7,26 +7,15 @@ angular.module("blankSlate").controller("mainCtrl", function(mainServ, $scope, $
       mainServ.getCurrentUser()
         .then(function(response){
           $scope.currentUser = response;
-          $state.go("color");
+          // $state.go("profile");
         })
     })
-
+  };
+  $scope.logoutUser = function(){
+    console.log("lets bounce");
+    $scope.currentUser = null;
   };
 
-// $scope.fillcolor = "#FFFF00";
-// $scope.usercolor = "#FFFF00";
-//
-// $scope.userColorPick = function(n){
-// $scope.usercolor = "#" + n;
-// console.log(n);
-// };
-//
-//   $scope.colorMe = function(n){
-//   var currentElement = document.getElementById(n);
-//   console.log(n);
-//   currentElement.setAttribute("fill", $scope.usercolor);
-//   //use this color to pick a soundbyte
-// };
 
 
 });
