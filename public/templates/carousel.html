@@ -1,0 +1,22 @@
+
+<div class="container">
+	  <button type="button" ng-click="getColors()">GET THE PAGES</button>
+	<div class="colorbox">
+	  <form ng-submit="addPage(newPage)"><!--posts new beers-->
+	    <input type="text" ng-model="newPage.name" placeholder="add your name">
+				    <input type="text" ng-model="newPage.image" placeholder="add your image">
+	  </form>
+
+	      <div   ng-bind-html="trustThisSVG()">
+					<div ng-bind="colorPages">
+					</div>
+	        <h2>
+	          <!-- <span>{{onePage.name}}</span> -->
+
+
+	          <button type="button" ng-hide="readyToUpdate" ng-click="deletePage(onePage)">DRINK</button>
+	        </h2>
+
+	      </div>
+	</div>
+</div>

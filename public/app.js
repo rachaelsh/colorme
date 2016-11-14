@@ -22,7 +22,10 @@ myApp.config(function($stateProvider, $urlRouterProvider){
     url: "/profile",
     templateUrl: "./templates/profile.html"
   })
-
+  .state("carousel", {
+    url: "/carousel",
+    templateUrl: "./templates/carousel.html"
+  })
 
   $urlRouterProvider.otherwise("/");
 

@@ -2,9 +2,8 @@ var mongoose = require('mongoose');
 
 var colorSchema = new mongoose.Schema({
   name: {type: String, required: true},
-  svg: {type: String, required: true},
-  timestamp: Date
+  html: {type: String, required: true}
 });
 
 
-module.exports = mongoose.model("colors", soundSchema);
+module.exports = mongoose.model("Colors", colorSchema);
