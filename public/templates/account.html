@@ -1,5 +1,7 @@
 <div ng-if="!currentUser" class="loginmodal">
-    <h1>Welcome.<span>log in here.</span></h1>
+
+
+        <h1>Hi there!</h1><img class="pupimage" src="/images/svgs/pupfacescrib.svg"/></h1>
     <form ng-submit="loginUser(user)">
         <div class="logininfo">
             <fieldset>
@@ -7,40 +9,38 @@
                 <input type="text" placeholder="Email" ng-model="user.email">
                 <p>Password</p>
                 <input placeholder="Password" type="password" ng-model="user.password">
-                <button class="buttons left" type="submit" name="login">log in!</button>
-            </div>
-        </fieldset>
-        <fieldset>
-
-            <label class="collapse" for="_1">New User?</label>
+              </fieldset>
+                  </div>
+          <fieldset>
+            <label class="collapse" for="_1">New User</label>
             <input id="_1" type="checkbox">
-
             <div>
-                <p>Please include the following:</p>
-                <fieldset>
-                    <fieldset class="left">
-                        <p>What's your Email?</p>
-                        <input placeholder="Name" type="text" ng-model="user.name">
-                    </fieldset>
-                    <fieldset class="right">
-                        <p>What's your favorite color?</p>
-                        <input placeholder="Color" type="text" ng-model="user.color">
-                    </fieldset>
-                </fieldset>
-            </div>
 
-        </fieldset>
+                    <div class="register" ><p>What's your name?</p>
+                    <input placeholder="Name" type="text" ng-model="user.name"></div>
+                    <div class="register"><p>What's your favorite color?</p>
+                    <input placeholder="Color" type="text" ng-model="user.color"></div>
+
+            </div>
+            </fieldset>
+
+        <button class="loginbutton" type="submit" name="login">log in!</button>
     </form>
 
 </div>
-
 <div ng-if="currentUser" class="profile">
-    <h1>HOME!</h1>
-    <!-- ng-if="currentUser" -->
+
     <h1 ng-model="currentUser">Hi,
         {{currentUser.name}}!</h1>
+
+
+        <div class="usercolors">
+
+
+
+        </div>
     <form ng-submit="logoutUser()">
         <button type="submit" name="logout">log out!</button>
     </form>
-    <!-- then you want a screen of your pictures that you can trash -->
+
 </div>

@@ -53,12 +53,13 @@
     .then(function(response){
       console.log(response);
     // var imageparse = $sce.trustAsHtml(response.data.image);
-      $scope.colorPages = "<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg'><g><title>background</title><rect fill='#fff' id='canvas_background' height='42' width='42' y='-1' x='-1'/><g display='none' overflow='visible' y='0' x='0' height='100%' width='100%' id='canvasGrid'><rect fill='url(#gridpattern)' stroke-width='0' y='0' x='0' height='100%' width='100%'/></g></g><g><title>Layer 1</title><ellipse ry='15' rx='14' id='svg_2' cy='20' cx='20.5' stroke-width='1.5' stroke='#000' fill='#fff'/></g></svg>";
-
-      $scope.trustThisSVG = function(){
-
-        return $sce.trustAsHtml($scope.colorPages);
-      }
+      $scope.colorPages = response;
+      $scope.colorPages.map(function(key){
+        return document.getElementById('repeater').insertAdjacentHTML('beforeend', "<div class='box'>" + key.html);
+      })
+      // $scope.trustThisSVG = function(){
+      //   return $sce.trustAsHtml($scope.colorPages[2].html);
+      // }
 
       // $sce.trustAsHtml(response);
       // $scope.parsedPage = $sce.trustAsHtml(colorPages);

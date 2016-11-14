@@ -38,8 +38,7 @@ function dragended() {
 
 
 
-d3.select("#buttoninsert")
-  .append('button').html("clear")
+d3.select("#buttoninsert").html("clear")
   .on('click', function() {
   svg.selectAll("path").remove();
 });
