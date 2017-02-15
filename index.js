@@ -5,15 +5,15 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const passport = require('passport');
 
-const userCtrl = require('./controllers/userCtrl');
-const config = require('./config/config');
+const userCtrl = require('./controllers/userCtrl.js');
+// const config = require('./config/config.js');
 const colorCtrl = require('./controllers/colorCtrl.js');
 
 const app = express();
 
 require('./config/passport.js')(passport);
 
-app.use(session(config));
+app.use(session({ secret: 'justdoit' }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors());
